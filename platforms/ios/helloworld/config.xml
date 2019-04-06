@@ -53,12 +53,12 @@
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
     </feature>
-    <name>helloworld</name>
+    <name>Online Radio</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        It's my first app
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="gromsam@mail.ru" href="http://phonegap.com">
+        Gromsam
     </author>
     <content src="index.html" />
     <access origin="*" />

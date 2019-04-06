@@ -22,7 +22,7 @@
       <div class="page-content">
         <div class="block-title">Основное меню</div>
         <div class="block">
-          <audio id="audio" src="http://ubuntu.hbr1.com:19800/trance.ogg"></audio>
+<!--          <audio id="audio" src="http://ubuntu.hbr1.com:19800/trance.ogg"></audio>-->
         </div>
 <!--        <div class="block-title">Main View Navigation</div>-->
         <div class="list links-list">
@@ -185,7 +185,8 @@
 
 <script>
 
-  let audio = document.getElementById('audio');
+  // let audio = document.getElementById('audio');
+  let audio = new Audio('http://ubuntu.hbr1.com:19800/trance.ogg');
   let buttonPlay = document.getElementById('start');
   let pause = document.getElementById('pause');
   let datamusic = document.getElementsByClassName('datamusic');
@@ -205,7 +206,9 @@
 
       datamusic[i].children[i2].onclick = function(){
 
-          audio.src = this.getAttribute('data-ogg');
+          // audio.src = this.getAttribute('data-ogg');
+
+          audio = new Audio(this.getAttribute('data-ogg'));
           audio.play();
 
         }
@@ -213,6 +216,8 @@
     }
 
   }
+
+
 
 
   buttonPlay.onclick = function(){
@@ -240,6 +245,9 @@
     }
 
   }
+
+
+
 
 </script>
 

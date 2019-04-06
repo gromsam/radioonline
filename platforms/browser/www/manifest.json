@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "helloworld",
-  "short_name": "helloworld",
+  "name": "Online Radio",
+  "short_name": "Online Radio",
   "version": "com.phonegap.helloworld",
-  "description": "Hello World sample application that responds to the deviceready event.",
-  "author": "PhoneGap Team",
+  "description": "It's my first app",
+  "author": "Gromsam",
   "icons": [],
   "start_url": "index.html",
   "theme_color": "#2196f3"
