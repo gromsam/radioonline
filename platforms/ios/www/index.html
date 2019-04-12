@@ -190,10 +190,11 @@
   let buttonPlay = document.getElementById('start');
   let pause = document.getElementById('pause');
   let datamusic = document.getElementsByClassName('datamusic');
+  let my_media = new Media('http://ubuntu.hbr1.com:19800/trance.ogg',false,false,false);
 
 
 
-  console.log(buttonPlay);
+  console.log(my_media.getDuration);
 
 
   for (let i = 0; i < datamusic.length; i++){
@@ -206,10 +207,10 @@
 
       datamusic[i].children[i2].onclick = function(){
 
-          // audio.src = this.getAttribute('data-ogg');
+          audio.src = this.getAttribute('data-ogg');
 
-          audio = new Audio(this.getAttribute('data-ogg'));
-          audio.play();
+          // audio = new Audio(this.getAttribute('data-ogg'));
+        my_media.play;
 
         }
 
@@ -222,14 +223,16 @@
 
   buttonPlay.onclick = function(){
 
-    if(audio.paused){
-      audio.play();
-      buttonPlay.textContent = 'Pause';
+    my_media.play;
 
-    }else{
-      audio.pause();
-      buttonPlay.textContent = 'Play';
-    }
+    // if(audio.paused){
+    //   my_media.play;
+    //   buttonPlay.textContent = 'Pause';
+    //
+    // }else{
+    //   my_media.pause;
+    //   buttonPlay.textContent = 'Play';
+    // }
 
   }
 

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="theme-color" content="#2196f3">
+  <meta name="theme-color" content="#000">
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
-  <title>Framework7</title>
+  <title>Online radio</title>
   <link rel="stylesheet" href="css/framework7.bundle.min.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="apple-touch-icon" href="img/f7-icon-square.png">
   <link rel="icon" href="img/f7-icon.png">
 </head>
 <body>
-<div id="app">
+<div id="app" class="framework7-root color-theme-red theme-dark">
   <div class="statusbar"></div>
 
   <div class="panel panel-left panel-cover">
@@ -22,7 +22,7 @@
       <div class="page-content">
         <div class="block-title">Основное меню</div>
         <div class="block">
-<!--          <audio id="audio" src="http://ubuntu.hbr1.com:19800/trance.ogg"></audio>-->
+          <audio id="audio" src="http://air.radiorecord.ru:805/neurofunk_320"></audio>
         </div>
 <!--        <div class="block-title">Main View Navigation</div>-->
         <div class="list links-list">
@@ -30,6 +30,14 @@
             <li>
               <a href="/about/" class="panel-close">Оприложении</a>
             </li>
+            <li>
+              <a href="/settings/" class="panel-close">Settings <i class="f7-icons">settings</i></a>
+            </li>
+
+<!--            <button class="button col gfn_button" id="settings" >-->
+<!--              -->
+<!--              &lt;!&ndash;      <span>Settings</span>&ndash;&gt;-->
+<!--            </button>-->
 <!--            <li>-->
 <!--              <a href="/action-sheet/" class="panel-close">Action Sheet</a>-->
 <!--            </li>-->
@@ -106,14 +114,24 @@
 
   <div class="toolbar toolbar-bottom tabbar tabbar-labels gfn_button_footergroup">
 
-    <button class="button col" id="pause" >Mute</button>
-    <button class="col button button-fill" id="start">Play</button>
+    <button class="button col gfn_button" id="pause" >
+      <i class="f7-icons">volume_mute_fill</i>
+<!--      <span>Mute</span>-->
+    </button>
+    <button class="col button button-fill gfn_button" id="start">
+      <i class="f7-icons">play_fill</i>
+<!--      <span>Play</span>-->
+    </button>
+
+
+
+
 
   </div>
 
 
   <div class="page-content">
-    <div class="block-title">Музыкальные стили</div>
+    <div class="block-title"><h2>Жанры</h2></div>
     <div class="list accordion-list">
       <ul>
 
@@ -135,7 +153,15 @@
                     </div>
                   </div>
                 </li>
-
+                <li data-ogg="https://revolutionradio.ru:8443/live.ogg">
+                  <div class="item-content">
+                    <div class="item-media"> <i class="icon icon-f7"></i>
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">Revolution Radio OGG</div>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -150,12 +176,22 @@
           <div class="accordion-item-content">
             <div class="list">
               <ul class="datamusic">
-                <li data-ogg="http://ubuntu.hbr1.com:19800/tronic.ogg">
+                <li data-ogg="http://ubuntu.hbr1.com:19800/tronic.aac">
                   <div class="item-content">
                     <div class="item-media"> <i class="icon icon-f7"></i>
                     </div>
                     <div class="item-inner">
-                      <div class="item-title">http://ubuntu.hbr1.com:19800/tronic.ogg</div>
+                      <div class="item-title">http://ubuntu.hbr1.com:19800/tronic.aac</div>
+                    </div>
+                  </div>
+                </li>
+
+                <li data-ogg="http://pureradio.eu:8000/low">
+                  <div class="item-content">
+                    <div class="item-media"> <i class="icon icon-f7"></i>
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">Pure Radio Holland - The Underground Channel (64 kbps)</div>
                     </div>
                   </div>
                 </li>
@@ -164,6 +200,208 @@
             </div>
           </div>
         </li>
+
+        <li class="accordion-item">
+          <a href="#" class="item-link item-content">
+            <div class="item-inner">
+              <div class="item-title">Neurofunk</div>
+            </div>
+          </a>
+          <div class="accordion-item-content">
+            <div class="list">
+              <ul class="datamusic">
+
+                <li data-ogg="http://air.radiorecord.ru:805/neurofunk_320">
+                  <div class="item-content">
+                    <div class="item-media">
+                      <i class="icon iconradio" style="background-image:url(img/iconradio/neurofunk.png)"></i>
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">Record Neurofunk</div>
+                    </div>
+                  </div>
+                </li>
+
+
+
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion-item">
+          <a href="#" class="item-link item-content">
+            <div class="item-inner">
+              <div class="item-title">Рэп</div>
+            </div>
+          </a>
+          <div class="accordion-item-content">
+            <div class="list">
+              <ul class="datamusic">
+
+                <li data-ogg="http://air.radiorecord.ru:805/yo_aac">
+                  <div class="item-content">
+                    <div class="item-media">
+                      <i class="icon iconradio" style="background-image:url(img/iconradio/neurofunk.png)"></i>
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">Liquidsoap Radio!</div>
+                    </div>
+                  </div>
+                </li>
+
+
+
+              </ul>
+            </div>
+          </div>
+        </li>
+
+
+
+
+
+        <li class="accordion-item">
+            <a href="#" class="item-link item-content">
+              <div class="item-inner">
+                <div class="item-title">Dance</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="list">
+                <ul class="datamusic">
+
+<!--                  <li data-ogg="http://stream.dancewave.online:8080/retrodance.ogg">-->
+<!--                    <div class="item-content">-->
+<!--                      <div class="item-media"> <i class="icon icon-f7"></i>-->
+<!--                      </div>-->
+<!--                      <div class="item-inner">-->
+<!--                        <div class="item-title">Dance Wave Retro!</div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </li>-->
+
+                  <li data-ogg="http://air.radiorecord.ru:805/club_320">
+                    <div class="item-content">
+                      <div class="item-media"> <i class="icon icon-f7"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">Record Club</div>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </li>
+
+
+
+        <li class="accordion-item">
+          <a href="#" class="item-link item-content">
+            <div class="item-inner">
+              <div class="item-title">Pop music</div>
+            </div>
+          </a>
+          <div class="accordion-item-content">
+            <div class="list">
+              <ul class="datamusic">
+
+                <li data-ogg="http://stream.radioreklama.bg/nrj_low.ogg">
+                  <div class="item-content">
+                    <div class="item-media"> <i class="icon icon-f7"></i>
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">RADIO ENERGY</div>
+                    </div>
+                  </div>
+                </li>
+
+                <li data-ogg="http://stream.radioreklama.bg:80/radio1_low.ogg">
+                  <div class="item-content">
+                    <div class="item-media"> <i class="icon icon-f7"></i>
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">RRADIO 1</div>
+                    </div>
+                  </div>
+                </li>
+
+
+                
+
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion-item">
+            <a href="#" class="item-link item-content">
+              <div class="item-inner">
+                <div class="item-title">Rock</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="list">
+                <ul class="datamusic">
+  
+                  <li data-ogg="http://stream-sd1.radioparadise.com/ogg-96m">
+                    <div class="item-content">
+                      <div class="item-media"> <i class="icon icon-f7"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">Radio Paradise - DJ-mixed modern & classic rock, world, electronica & more</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-ogg="http://stream.radioreklama.bg:80/radio1rock.ogg">
+                    <div class="item-content">
+                      <div class="item-media"> <i class="icon icon-f7"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">RADIO 1 ROCK</div>
+                      </div>
+                    </div>
+                  </li>
+
+                  
+  
+                </ul>
+              </div>
+            </div>
+          </li>
+
+
+        <li class="accordion-item">
+          <a href="#" class="item-link item-content">
+            <div class="item-inner">
+              <div class="item-title">Юмор</div>
+            </div>
+          </a>
+          <div class="accordion-item-content">
+            <div class="list">
+              <ul class="datamusic">
+
+                <li data-ogg="http://air.radiorecord.ru:805/ansh_320">
+                  <div class="item-content">
+                    <div class="item-media"> <i class="icon icon-f7"></i>
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">Anshlag FM</div>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </li>
+
+
+
+
+        
 
       </ul>
     </div>
@@ -185,8 +423,7 @@
 
 <script>
 
-  // let audio = document.getElementById('audio');
-  let audio = new Audio('http://ubuntu.hbr1.com:19800/trance.ogg');
+  let audio = document.getElementById('audio');
   let buttonPlay = document.getElementById('start');
   let pause = document.getElementById('pause');
   let datamusic = document.getElementsByClassName('datamusic');
@@ -206,9 +443,9 @@
 
       datamusic[i].children[i2].onclick = function(){
 
-          // audio.src = this.getAttribute('data-ogg');
+          console.log(this.dataset.ogg);
 
-          audio = new Audio(this.getAttribute('data-ogg'));
+          audio.src = this.dataset.ogg;
           audio.play();
 
         }
@@ -216,8 +453,6 @@
     }
 
   }
-
-
 
 
   buttonPlay.onclick = function(){
@@ -245,9 +480,6 @@
     }
 
   }
-
-
-
 
 </script>
 

@@ -603,3 +603,15 @@ code {
   align-items: center;
   padding: 0 20px;
 }
+.iconradio{
+  width: 50px;
+  height: 50px;
+}
+.gfn_button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gfn_button i{
+  /*margin-right: 5px;*/
+}
